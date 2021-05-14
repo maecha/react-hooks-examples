@@ -1,4 +1,4 @@
-# Nest.js Sampe Project (Next.js + TypeScript + Sass)
+# react-hooks-examples
 
 React Hooks API の世界に飛び込む。
 
