@@ -1,7 +1,5 @@
-import { NextPage } from 'next'
-
-const Index: NextPage = () => {
+const IndexPage = () => {
   return <div>hoge</div>
 }
 
-export default Index
+export default IndexPage
