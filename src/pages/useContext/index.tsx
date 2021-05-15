@@ -1,11 +1,33 @@
 import React, { createContext, useState } from 'react'
-import Context from '@/components/UseContextExample/UseContextExampleA'
+import ContextA from '@/components/UseContextExample/UseContextExampleA'
 
-export const UserContext = createContext()
-export const HobbyContext = createContext()
+type UserContextData = {
+  name: string
+  age: number | null
+}
+
+const userContextData: UserContextData = {
+  name: '',
+  age: null,
+}
+
+export const UserContext = createContext(userContextData)
+export const HobbyContext = createContext('')
 
 const IndexPage = () => {
-  return <Context />
+  userContextData.name = 'せいや'
+  userContextData.age = 32
+  const [user] = useState(userContextData)
+  const [hobby] = useState('キャンプ')
+  return (
+    <div className="IndexPage">
+      <UserContext.Provider value={user}>
+        <HobbyContext.Provider value={hobby}>
+          <ContextA />
+        </HobbyContext.Provider>
+      </UserContext.Provider>
+    </div>
+  )
 }
 
 export default IndexPage

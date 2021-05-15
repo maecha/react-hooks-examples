@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { UserContext, HobbyContext } from '../../App'
+import { UserContext, HobbyContext } from '../../pages/useContext/index'
 
 const ContextC = () => {
   const user = useContext(UserContext)
@@ -11,3 +11,5 @@ const ContextC = () => {
     </p>
   )
 }
+
+export default ContextC
